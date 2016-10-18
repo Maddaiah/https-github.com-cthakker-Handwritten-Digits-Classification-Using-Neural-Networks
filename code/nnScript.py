@@ -9,9 +9,11 @@ def initializeWeights(n_in,n_out):
     """
     # initializeWeights return the random weights for Neural Network given the
     # number of node in the input layer and output layer
+    
     # Input:
     # n_in: number of nodes of the input layer
     # n_out: number of nodes of the output layer
+    
     # Output:
     # W: matrix of random initial weights with size (n_out x (n_in + 1))"""
 
@@ -30,6 +32,7 @@ def preprocess():
     """ Input:
      Although this function doesn't have any input, you are required to load
      the MNIST data set from file 'mnist_all.mat'.
+     
      Output:
      train_data: matrix of training set. Each row of train_data contains
        feature vector of a image
@@ -43,6 +46,7 @@ def preprocess():
        feature vector of a image
      test_label: vector of label corresponding to each image in the testing
        set
+       
      Some suggestions for preprocessing step:
      - divide the original data set to training, validation and testing set
            with corresponding labels
@@ -108,6 +112,7 @@ def nnObjFunction(params, *args):
     %   likelihood error function with regularization) given the parameters
     %   of Neural Networks, thetraining data, their corresponding training
     %   labels and lambda - regularization hyper-parameter.
+   
     % Input:
     % params: vector of weights of 2 matrices w1 (weights of connections from
     %     input layer to hidden layer) and w2 (weights of connections from
@@ -123,12 +128,14 @@ def nnObjFunction(params, *args):
     %     in the vector represents the truth label of its corresponding image.
     % lambda: regularization hyper-parameter. This value is used for fixing the
     %     overfitting problem.
+   
     % Output:
     % obj_val: a scalar value representing value of error function
     % obj_grad: a SINGLE vector of gradient value of error function
     % NOTE: how to compute obj_grad
     % Use backpropagation algorithm to compute the gradient of error function
     % for each weights in weight matrices.
+    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % reshape 'params' vector into 2 matrices of weight w1 and w2
     % w1: matrix of weights of connections from input layer to hidden layers.
@@ -205,6 +212,7 @@ def nnPredict(w1,w2,data):
 
     """% nnPredict predicts the label of data given the parameter w1, w2 of Neural
     % Network.
+    
     % Input:
     % w1: matrix of weights of connections from input layer to hidden layers.
     %     w1(i, j) represents the weight of connection from unit i in input
@@ -214,6 +222,7 @@ def nnPredict(w1,w2,data):
     %     layer to unit j in output layer.
     % data: matrix of data. Each row of this matrix represents the feature
     %       vector of a particular image
+    
     % Output:
     % label: a column vector of predicted labels"""
 
